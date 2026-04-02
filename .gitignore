@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+backend/venv/
+backend/model_repo/venv/
+
+# Rust
+target/
+
+# Runtime files
+runtime/
+*.lab
+
+# OS/editor
+.DS_Store
+Thumbs.db
