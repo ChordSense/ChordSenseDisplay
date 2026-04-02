@@ -71,6 +71,10 @@ python3.10 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
+pip uninstall -y h5py numpy
+pip install "numpy<2"
+pip install --no-build-isolation "h5py==3.8.0"
+pip install -r requirements.txt
 deactivate
 ```
 
