@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.venv/
 venv/
 backend/venv/
 backend/model_repo/venv/
@@ -10,10 +11,31 @@ backend/model_repo/venv/
 # Rust
 target/
 
-# Runtime files
+# Runtime / generated outputs
 runtime/
-*.lab
+*.log
+outputs/**/*.lab
 
-# OS/editor
+# OS / editor
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+
+# Obsidian
+.obsidian/
+research/.obsidian/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Env / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Local data / artifacts
+data/
+datasets/
+artifacts/
