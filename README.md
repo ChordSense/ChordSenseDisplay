@@ -39,7 +39,7 @@ git submodule update --init --recursive
 Expected local layout:
 
 ```text
-ChordSenseOfficial/
+ChordSense/
 ├── backend/
 │   ├── app.py
 │   ├── requirements.txt
@@ -53,11 +53,12 @@ ChordSenseOfficial/
 Create and activate the backend virtual environment, then install dependencies:
 
 ```bash
-cd ~/projects/ChordSenseOfficial/backend
+cd ~/ChordSense/backend
 python3.10 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
+deactivate
 ```
 
 ## Model Repository Setup
@@ -65,11 +66,12 @@ pip install -r requirements.txt
 The backend currently expects the model repository to use its own separate Python virtual environment.
 
 ```bash
-cd ~/projects/ChordSenseOfficial/backend/model_repo
+cd ~/ChordSense/backend/model_repo
 python3.10 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
+deactivate
 ```
 
 ## Rust Installation
@@ -89,7 +91,7 @@ rustc --version
 ## Build the Frontend
 
 ```bash
-cd ~/projects/ChordSenseOfficial/frontend
+cd ~/ChordSense/frontend
 source "$HOME/.cargo/env"
 cargo build --bin chordsense_audio_synced
 ```
@@ -99,7 +101,7 @@ cargo build --bin chordsense_audio_synced
 ### Start the Backend
 
 ```bash
-cd ~/projects/ChordSenseOfficial/backend
+cd ~/ChordSense/backend
 source venv/bin/activate
 python app.py
 ```
@@ -109,7 +111,7 @@ python app.py
 Open a second terminal and run:
 
 ```bash
-cd ~/projects/ChordSenseOfficial/frontend
+cd ~/ChordSense/frontend
 source "$HOME/.cargo/env"
 cargo run --bin chordsense_audio_synced
 ```
