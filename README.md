@@ -66,7 +66,6 @@ deactivate
 The backend currently expects the model repository to use its own separate Python virtual environment.
 
 ```bash
-cd ..
 cd model_repo
 python3.10 -m venv venv
 source venv/bin/activate
