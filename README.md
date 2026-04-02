@@ -95,7 +95,7 @@ rustc --version
 ## Build the Frontend
 
 ```bash
-cd ~/ChordSense/frontend
+cd frontend
 source "$HOME/.cargo/env"
 cargo build --bin chordsense_audio_synced
 ```
@@ -105,7 +105,7 @@ cargo build --bin chordsense_audio_synced
 ### Start the Backend
 
 ```bash
-cd ~/ChordSense/backend
+cd backend
 source venv/bin/activate
 python app.py
 ```
@@ -115,7 +115,7 @@ python app.py
 Open a second terminal and run:
 
 ```bash
-cd ~/ChordSense/frontend
+cd frontend
 source "$HOME/.cargo/env"
 cargo run --bin chordsense_audio_synced
 ```
